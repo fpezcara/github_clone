@@ -4,7 +4,6 @@ import axios from "axios";
 
 const SearchInput = () => {
   const githubUrl = "https://api.github.com/users/";
-
   const [username, setUsername] = useState("");
   const [repos, setRepos] = useContext(RepoContext);
 
@@ -19,8 +18,8 @@ const SearchInput = () => {
 
   return (
     <>
-    <h1>Github Repo Search</h1>
-    <h4>Enter Your Github Username Below:</h4>
+      <h1>Github Repo Search</h1>
+      <h4>Enter Your Github Username Below:</h4>
       <input onChange={handleUsername} type="text" />
       <button onClick={handleSubmit} type="submit">
         Search

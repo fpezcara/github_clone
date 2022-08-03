@@ -1,6 +1,19 @@
 a {
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
+}
+
+#repoCard {
+    /* background: green; */
+
+}
+
+#repoCard div {
+    padding: 2em;
+    border: 1px solid #bcc3cd;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
