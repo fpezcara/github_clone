@@ -4,7 +4,6 @@ import "./card.css";
 
 const RepoCard = () => {
     const [repos, setRepos] = useContext(RepoContext);
-    console.log("WE ARE IN REPOINFO COMPONENT,", repos);
 
     return <>
         <div>
