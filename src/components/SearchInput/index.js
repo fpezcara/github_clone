@@ -19,6 +19,8 @@ const SearchInput = () => {
 
   return (
     <>
+    <h1>Github Repo Search</h1>
+    <h4>Enter Your Github Username Below:</h4>
       <input onChange={handleUsername} type="text" />
       <button onClick={handleSubmit} type="submit">
         Search
