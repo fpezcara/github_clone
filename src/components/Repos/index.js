@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { RepoContext } from "../../context";
 import RepoCard from "../RepoCard";
-import './styles.css'
+import "./styles.css";
 
 const Repos = () => {
   const [repos, setRepos] = useContext(RepoContext);
 
-  console.log(repos.length);
+  //1. open_issues_count
+  console.log(repos);
   return (
     <>
       {repos.length !== 0 && (

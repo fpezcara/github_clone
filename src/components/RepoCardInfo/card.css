@@ -78,14 +78,3 @@ a:hover {
 .ulContainer {
     display: flex;
 }
-
-#repoCard>div>button {
-    width: 7%;
-    padding: 1em;
-    background: #9FC2E4;
-    border: none;
-    cursor: pointer;
-    border-radius: 1em;
-    margin-top: 1em;
-    color: #fff;
-}
