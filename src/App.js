@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import {  RepoProvider } from "./context";
+import { RepoProvider } from "./context";
 import { SearchInput, RepoInfo } from "./components";
 
 const App = () => {

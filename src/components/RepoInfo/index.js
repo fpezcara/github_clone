@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { RepoContext } from "../../context";
+import RepoCard from "../RepoCard";
 
 const RepoInfo = () => {
-  const [repos, setRepos] = useContext(RepoContext);
-  console.log("WE ARE IN REPOINFO COMPONENT,", repos);
-  return <div>RepoInfo</div>;
+  return <>
+    <RepoCard />
+  </>;
 };
 
 export default RepoInfo;
