@@ -1,35 +1,41 @@
-nav {
-    background: #24292F;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 10vh;
-    padding: 1em;
+.navbar {
+    padding-left: 30px;
+}
+
+.bg-github {
+    background-color: #24292f;
+    color: white
+}
+
+.nav-link {
     color: #fff;
+    font-weight: 600;
+    font-size: 14px;
 }
 
-svg {
-    background: #fff;
-    color: black;
-    border-radius: 50%;
+.nav-link:hover {
+    text-decoration: none;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 7em;
-
+.form-control {
+    max-width: 250px;
+    height: 28px;
+    padding: 5px 12px;
+    background: none;
+    line-height: 20px;
+    cursor: text;
+    border-style: none;
+    border: 1px solid #57606a;
+    letter-spacing: -0.2px;
+    margin-right: 8px;
 }
 
-nav a {
-    cursor: pointer;
-
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 14px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+.form-control:focus {
+   box-shadow: none;
 }
