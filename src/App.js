@@ -15,7 +15,7 @@ const App = () => {
         <Container size="sm">
           <Row className="p-3">
             <h1>Github</h1>
-            <h4>Search for repositories entering the username below</h4>
+            <h4>Search for public repositories entering a username below</h4>
           </Row>
           <Row justify md={4} className="d-flex flex-row mt-3 ">
             <Col className="m-4 ">
