@@ -1,0 +1,35 @@
+nav {
+    background: #24292F;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 10vh;
+    padding: 1em;
+    color: #fff;
+}
+
+svg {
+    background: #fff;
+    color: black;
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 7em;
+
+}
+
+nav a {
+    cursor: pointer;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
