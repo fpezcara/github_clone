@@ -1,6 +1,7 @@
 import React from "react";
 import { RepoProvider } from "./context";
-import { NavBar, SearchInput, Repos } from "./components";
+import { NavBar, SearchInput, Repos, Footer } from "./components";
+import "./App.css"
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -27,6 +28,7 @@ const App = () => {
             </Col>
           </Row>
         </Container>
+        <Footer />
       </RepoProvider>
     </>
   );
