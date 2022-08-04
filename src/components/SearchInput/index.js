@@ -12,8 +12,12 @@ const SearchInput = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { data } = await axios.get(githubUrl + username + "/repos");
-    await setRepos(data);
+    try {
+      const { data } = await axios.get(githubUrl + username + "/repos");
+      await setRepos(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
