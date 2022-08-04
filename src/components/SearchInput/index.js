@@ -2,6 +2,9 @@ import React, { useState, useContext } from "react";
 import { RepoContext } from "../../context";
 import axios from "axios";
 
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+
 const SearchInput = () => {
   const githubUrl = "https://api.github.com/users/";
   const [username, setUsername] = useState("");
@@ -22,12 +25,21 @@ const SearchInput = () => {
 
   return (
     <>
-      <h1>Github Repo Search</h1>
-      <h4>Enter Your Github Username Below:</h4>
-      <input onChange={handleUsername} type="text" />
-      <button onClick={handleSubmit} type="submit">
-        Search
-      </button>
+      <Form className="d-flex justify-content-between align-items-center">
+        <Form.Group>
+          <Form.Label>Enter your Github username</Form.Label>
+          <Form.Control onChange={handleUsername} type="text" />
+        </Form.Group>
+        <Button
+          variant="light"
+          onClick={handleSubmit}
+          type="submit"
+          size="md"
+          className="justify-self-baseline"
+        >
+          Search
+        </Button>
+      </Form>
     </>
   );
 };

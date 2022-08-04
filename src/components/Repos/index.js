@@ -3,17 +3,20 @@ import { RepoContext } from "../../context";
 import RepoCard from "../RepoCard";
 import "./styles.css";
 
+import Row from "react-bootstrap/Row";
 const Repos = () => {
   const [repos, setRepos] = useContext(RepoContext);
-
-  //1. open_issues_count
   console.log(repos);
   return (
     <>
       {repos.length !== 0 && (
         <article id="reposContainer">
-          <h2>Repositories</h2>
-          <RepoCard />
+          <Row className="p-3">
+            <h2>Repositories</h2>
+          </Row>
+          <Row>
+            <RepoCard />
+          </Row>
         </article>
       )}
     </>

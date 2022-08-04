@@ -1,9 +1,12 @@
 import React from "react";
 import "./styles.css";
 
+import Card from "react-bootstrap/Card";
+
 const RepoCardInfo = ({ repo }) => {
+  console.log(repo);
   return (
-    <>
+    <Card.Footer className="d-flex align-items-center">
       <ul>
         <li>
           <svg
@@ -55,7 +58,7 @@ const RepoCardInfo = ({ repo }) => {
         </li>
         <li>{repo.updated_at}</li>
       </ul>
-    </>
+    </Card.Footer>
   );
 };
 
