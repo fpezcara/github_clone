@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import { RepoContext } from "../../context";
 import axios from "axios";
+import Card from 'react-bootstrap/Card';
+import "./searchInput.css"
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -25,21 +27,24 @@ const SearchInput = () => {
 
   return (
     <>
-      <Form className="d-flex justify-content-between align-items-center">
-        <Form.Group>
-          <Form.Label>Enter your Github username</Form.Label>
-          <Form.Control onChange={handleUsername} type="text" />
-        </Form.Group>
-        <Button
-          variant="light"
-          onClick={handleSubmit}
-          type="submit"
-          size="md"
-          className="justify-self-baseline"
-        >
-          Search
-        </Button>
-      </Form>
+      <Card className="text-center shadow-lg p-3 mb-5 bg-white rounded">
+        <Card.Body>
+          <Form>
+            <Form.Group>
+              <Form.Label>Enter your Github username</Form.Label>
+              <Form.Control onChange={handleUsername} type="text" className="searchInput"/>
+            </Form.Group>
+            <Button
+              variant="primary"
+              onClick={handleSubmit}
+              type="submit"
+              className="search"
+            >
+              Search
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
     </>
   );
 };
