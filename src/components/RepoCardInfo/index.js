@@ -1,13 +1,17 @@
 import React from "react";
 import "./styles.css";
+import { getDate } from "../../helpers";
 
 import Card from "react-bootstrap/Card";
 
 const RepoCardInfo = ({ repo }) => {
+  //   const date = repo.update_at.split("T");
   console.log(repo);
+  console.log(repo.update_at);
+  //console.log(date);
   return (
-    <Card.Footer className="d-flex align-items-center">
-      <ul>
+    <Card.Body className="d-flex align-items-center p-3">
+      <ul className="repoCardInfoUl">
         <li>
           <svg
             aria-hidden="true"
@@ -58,7 +62,7 @@ const RepoCardInfo = ({ repo }) => {
         </li>
         <li>{repo.updated_at}</li>
       </ul>
-    </Card.Footer>
+    </Card.Body>
   );
 };
 
