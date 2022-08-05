@@ -5,7 +5,7 @@ import { getDate } from "../../helpers";
 import Card from "react-bootstrap/Card";
 
 const RepoCardInfo = ({ repo }) => {
-  console.log("aaaaa", getDate(repo));
+  
   return (
     <Card.Body className="d-flex align-items-center p-3">
       <ul className="repoCardInfoUl">

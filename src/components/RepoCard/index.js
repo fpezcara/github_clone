@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { RepoContext } from "../../context";
 import "./card.css";
 import RepoCardInfo from "../RepoCardInfo";

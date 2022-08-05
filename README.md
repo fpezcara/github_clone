@@ -20,7 +20,7 @@
 ### Challenges
 
 ## Future Features
-
+- Handling errors
 
 ## Authors
 Harrison Grant & Florencia Pezcara
