@@ -8,18 +8,20 @@ const RepoCard = () => {
   const [repos] = useContext(RepoContext);
 
   return (
-    // <div id="repoCard">
     <>
       {repos.map((repo) => (
-        <Card id="repoCard" key={repo.id} className="">
-          <Card.Body>
+        <Card
+          key={repo.id}
+          className="m-0 p-3 my-4 shadow-sm p-3 mb-5 rounded bg-white text-dark"
+        >
+          <Card.Title className="mb-0 p-3 d-flex flex-column">
             <a href={repo.html_url}>{repo.name}</a>
-            <span className="repoDescription">{repo.description}</span>
-          </Card.Body>
+            <span className="mt-2 pt-4">{repo.description}</span>
+            <span>{repo.language}</span>
+          </Card.Title>
           <RepoCardInfo repo={repo} />
         </Card>
       ))}
-      {/* </div> */}
     </>
   );
 };

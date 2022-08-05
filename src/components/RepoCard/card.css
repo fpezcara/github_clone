@@ -6,39 +6,7 @@ a:hover {
     text-decoration: underline;
 }
 
-#repoCard {
-    height: 40%;
-
-
-}
-
-/* #repoCard div:first-child {
-    /* padding: 2em; */
-/* border: 1px solid #bcc3cd;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-
-} */
-
-/* #repoCard div:last-child {
-    border: 1px solid #bcc3cd;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-} */
-
-/* #repoCard div {
-    padding: 2.5em 1em;
-    border: 1px solid #bcc3cd;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-/* justify-content: center;
-    min-height: 5em;
-    height: 1em; */
-
-/* }  */
-
-#repoCard ul {
+.repoCardInfoUl {
     list-style-type: none;
     display: flex;
     /* justify-content: space-evenly; */
@@ -46,6 +14,8 @@ a:hover {
     margin: 0;
     padding: 0;
     gap: 25px;
+    align-items: baseline;
+    justify-content: baseline;
 }
 
 #repoCard p {
@@ -53,26 +23,24 @@ a:hover {
     padding: 0;
 }
 
-#repoCard li {
+.repoCardInfoUl li {
     display: flex;
+    align-items: baseline;
+    justify-content: center;
     /* width: 200px; */
-    align-items: center;
-    justify-content: space-between;
+
     gap: 10px;
 }
 
 .svgImg {
-    width: 20px;
-    height: 20px;
-}
-
-.repoDescription {
-    height: 3em;
-    padding-top: 20px;
-    margin-top: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 .ulContainer {
     display: flex;
 }
 
+.card {
+    background-color: indianred;
+}

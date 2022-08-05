@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { RepoContext } from "../../context";
 import axios from "axios";
-import Card from 'react-bootstrap/Card';
-import "./searchInput.css"
+import Card from "react-bootstrap/Card";
+import "./searchInput.css";
 
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -23,19 +23,30 @@ const SearchInput = () => {
     } catch (err) {
       console.log(err);
     }
+    setUsername("");
   };
 
   return (
     <>
-      <Card className="text-center shadow-lg p-3 mb-5 bg-white rounded">
+      <Card
+        size="md"
+        className="text-center shadow-lg p-3 mb-5 bg-white rounded"
+      >
         <Card.Body>
-          <Form>
-            <Form.Group>
-              <Form.Label>Enter your Github username</Form.Label>
-              <Form.Control onChange={handleUsername} type="text" className="searchInput"/>
+          <span id="cardBodySpan">Search for public repositories entering a username below</span>
+          <Form className="mt-4">
+            <Form.Group controlId="username" className="text-dark">
+              <Form.Label className="mb-4">Enter your Github username</Form.Label>
+              <Form.Control
+                onChange={handleUsername}
+                type="text"
+                placeholder="Enter username"
+                className="searchInput text-dark"
+                value={username}
+              />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="dark"
               onClick={handleSubmit}
               type="submit"
               className="search"

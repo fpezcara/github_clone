@@ -1,13 +1,14 @@
 import React from "react";
 import "./styles.css";
+import { getDate } from "../../helpers";
 
 import Card from "react-bootstrap/Card";
 
 const RepoCardInfo = ({ repo }) => {
-  console.log(repo);
+  console.log("aaaaa", getDate(repo));
   return (
-    <Card.Footer className="d-flex align-items-center">
-      <ul>
+    <Card.Body className="d-flex align-items-center p-3">
+      <ul className="repoCardInfoUl">
         <li>
           <svg
             aria-hidden="true"
@@ -56,9 +57,9 @@ const RepoCardInfo = ({ repo }) => {
           </svg>
           <p>{repo.forks_count}</p>
         </li>
-        <li>{repo.updated_at}</li>
+        <li>Last updated on: {getDate(repo)}</li>
       </ul>
-    </Card.Footer>
+    </Card.Body>
   );
 };
 
