@@ -11,6 +11,7 @@ const SearchInput = () => {
   const githubUrl = "https://api.github.com/users/";
   const [username, setUsername] = useState("");
   const [repos, setRepos] = useContext(RepoContext);
+  const [error, setError] = useState(false);
 
   const handleUsername = (e) => {
     setUsername(e.target.value);
@@ -20,11 +21,14 @@ const SearchInput = () => {
     try {
       const { data } = await axios.get(githubUrl + username + "/repos");
       await setRepos(data);
+      setError(false);
     } catch (err) {
+      setError(true);
       console.log(err);
     }
     setUsername("");
   };
+  console.log(error);
 
   return (
     <>
@@ -33,10 +37,14 @@ const SearchInput = () => {
         className="text-center shadow-lg p-3 mb-5 bg-white rounded"
       >
         <Card.Body>
-          <span id="cardBodySpan">Search for public repositories entering a username below</span>
+          <span id="cardBodySpan">
+            Search for public repositories entering a username below
+          </span>
           <Form className="mt-4">
             <Form.Group controlId="username" className="text-dark">
-              <Form.Label className="mb-4">Enter your Github username</Form.Label>
+              <Form.Label className="mb-4">
+                Enter your Github username
+              </Form.Label>
               <Form.Control
                 onChange={handleUsername}
                 type="text"
@@ -45,6 +53,7 @@ const SearchInput = () => {
                 value={username}
               />
             </Form.Group>
+            {error && <span id="error">Please choose a valid username.</span>}
             <Button
               variant="dark"
               onClick={handleSubmit}
