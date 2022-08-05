@@ -1,26 +1,17 @@
-export function getDate(d) {
-  let day, month, year;
+function getDateFromString(repo) {
+  const index = repo.updated_at.indexOf("T");
+  const date = repo.updated_at.substr(0, index);
+  return date;
+}
 
-  result = d.match("[0-9]{2}([-/ .])[0-9]{2}[-/ .][0-9]{4}");
-  if (null != result) {
-    dateSplitted = result[0].split(result[1]);
-    day = dateSplitted[0];
-    month = dateSplitted[1];
-    year = dateSplitted[2];
-  }
-  result = d.match("[0-9]{4}([-/ .])[0-9]{2}[-/ .][0-9]{2}");
-  if (null != result) {
-    dateSplitted = result[0].split(result[1]);
-    day = dateSplitted[2];
-    month = dateSplitted[1];
-    year = dateSplitted[0];
-  }
+export function getDate(repo) {
+  console.log(getDateFromString(repo));
+  const dateString = getDateFromString(repo);
+  const d = dateString.split("-");
 
-  if (month > 12) {
-    aux = day;
-    day = month;
-    month = aux;
-  }
+  const year = d[0];
+  const month = d[1];
+  const day = d[2];
 
-  return year + "/" + month + "/" + day;
+  return `${day}/${month}/${year}`;
 }

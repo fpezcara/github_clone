@@ -40,3 +40,7 @@ a:hover {
 .ulContainer {
     display: flex;
 }
+
+.card {
+    background-color: indianred;
+}

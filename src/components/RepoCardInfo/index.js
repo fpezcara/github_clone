@@ -5,10 +5,7 @@ import { getDate } from "../../helpers";
 import Card from "react-bootstrap/Card";
 
 const RepoCardInfo = ({ repo }) => {
-  //   const date = repo.update_at.split("T");
-  console.log(repo);
-  console.log(repo.update_at);
-  //console.log(date);
+  console.log("aaaaa", getDate(repo));
   return (
     <Card.Body className="d-flex align-items-center p-3">
       <ul className="repoCardInfoUl">
@@ -60,7 +57,7 @@ const RepoCardInfo = ({ repo }) => {
           </svg>
           <p>{repo.forks_count}</p>
         </li>
-        <li>{repo.updated_at}</li>
+        <li>Last updated on: {getDate(repo)}</li>
       </ul>
     </Card.Body>
   );

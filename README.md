@@ -9,25 +9,18 @@
 
 ### Usage
 
-- To start app, run `npm run dev` or `npm run start`
+- To start app, run `npm run dev` 
 
 ## Wins and Challenges
 
 ### Wins
-- Core functionality completed
-- Good error handling
-- Good use of CSS
-- Strong teamwork
-- Good file structure (followed best practice)
+- Great team work
+- Learnt to use react-bootstrap
 
 ### Challenges
-- Key handling
+
 ## Future Features
-- Incorporate bootstrap for detailed styling
-- Display more information
-- Add a search bar for the repos
-- Include a ranking order
-- Incorporate github heatmap and other data visualisers
+
 
 ## Authors
 Harrison Grant & Florencia Pezcara
