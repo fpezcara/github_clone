@@ -5,7 +5,6 @@ function getDateFromString(repo) {
 }
 
 export function getDate(repo) {
-  console.log(getDateFromString(repo));
   const dateString = getDateFromString(repo);
   const d = dateString.split("-");
 
@@ -15,3 +14,4 @@ export function getDate(repo) {
 
   return `${day}/${month}/${year}`;
 }
+
